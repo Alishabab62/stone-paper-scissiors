@@ -5,7 +5,9 @@
 
 header{
     width: 100%;
-    border-bottom: 1px solid black;
+    box-shadow: 1px 1px 15px rgb(135, 135, 135);
+    background: #F9A620;
+    color: white;
 }
 header h3{
     text-align: center;
@@ -15,9 +17,9 @@ header h3{
 
 .container{
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
-    background: rgb(181, 178, 178);
+    background: #A8D5E2;
     width: 200px;
     display: flex;
     justify-content: center;
@@ -26,24 +28,34 @@ header h3{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: none;
 }
 .container select{
     display: none;
     padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: #4472CA;
+    color: white;
 }
 .container button{
-    padding: 5px 10px;
+    padding: 10px 20px;
     color: white;
-    background-color: blueviolet;
-    border-radius: 5px;
+    background-color: #BD4F6C;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
 }
 
 #modal-container{
     position: absolute;
     z-index: 100;
     width: 300px;
-    height: 150px;
-    background: rgb(196, 189, 189);
+    height: 170px;
+    background: #A8D5E2;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -54,30 +66,39 @@ header h3{
 }
 
 #output1{
-    color: red;
+    color: white;
+    font-size: 22px;
+}
+#output1 span{
+    color: white;
 }
 #output2{
-    color: red;
+    color: white;
+    font-size: 22px;
     margin-top: 5px;
 }
 .reloadBtn{
-    padding: 5px 10px;
+    padding: 10px 20px;
     color: white;
-    background-color: blueviolet;
+    background-color: #BD4F6C;
     border-radius: 5px;
     position: relative;
-    left: 75px;
+    left: 35px;
     top: 10px;
     cursor: pointer;
+    border: none;
+    font-size: 18px;
 }
 #round-container{
     display: flex;
     justify-content: space-between;
     position: absolute;
     padding: 20px;
-    background: grey;
+    background: #A8D5E2;
     right: 0px;
     width: 250px;
+    color: white;
+    border-bottom-left-radius: 20px;
 }
 
 #output-container-win{

@@ -39,14 +39,14 @@ options.addEventListener("change",() => {
     }
     if(selectedIndexUser == computerChoice){
         modalContainer.innerHTML = ""
-        output3.innerHTML = "Match Draw";
+        output3.innerHTML = "Match Draw 👏";
         output3.id = "output-container-draw"
         modalContainer.appendChild(output3);
         
     }
     else if(selectedIndexUser == 1 && computerChoice == 2){
         modalContainer.innerHTML = ""
-        output3.innerHTML = "Computer Win";
+        output3.innerHTML = "Computer Win 👎";
         output3.id = "output-container-loss"
         modalContainer.appendChild(output3);
         computerRound++;
@@ -59,7 +59,7 @@ options.addEventListener("change",() => {
     }
     else if(selectedIndexUser == 1 && computerChoice == 3){
         modalContainer.innerHTML = ""
-        output3.innerHTML = "You Win";
+        output3.innerHTML = "You Win 👍";
         output3.id = "output-container-win"
         modalContainer.appendChild(output3);
         userWin++;
@@ -72,7 +72,7 @@ options.addEventListener("change",() => {
     }
     else if(selectedIndexUser == 2 && computerChoice == 1){
         modalContainer.innerHTML = ""
-        output3.innerHTML = "You Win";
+        output3.innerHTML = "You Win 👍";
         output3.id = "output-container-win"
         modalContainer.appendChild(output3);
         userWin++;
@@ -85,7 +85,7 @@ options.addEventListener("change",() => {
     }
     else if(selectedIndexUser == 2 && computerChoice == 3){
         modalContainer.innerHTML = ""
-        output3.innerHTML = "Computer Win";
+        output3.innerHTML = "Computer Win 👎 ";
         output3.id = "output-container-loss"
         modalContainer.appendChild(output3);
         computerRound++;
@@ -98,7 +98,7 @@ options.addEventListener("change",() => {
     }
     else if(selectedIndexUser == 3 && computerChoice == 1){
         modalContainer.innerHTML = ""
-        output3.innerHTML = "Computer Win";
+        output3.innerHTML = "Computer Win 👎";
         output3.id = "output-container-loss"
         modalContainer.appendChild(output3);
         computerRound++;
@@ -111,7 +111,7 @@ options.addEventListener("change",() => {
     }
     else if(selectedIndexUser == 3 && computerChoice == 2){
         modalContainer.innerHTML = ""
-        output3.innerHTML = "You Win";
+        output3.innerHTML = "You Win 👍";
         output3.id = "output-container-win"
         modalContainer.appendChild(output3);
         userWin++;
@@ -132,8 +132,8 @@ options.addEventListener("change",() => {
     const output2 = document.createElement('h3');
     output1.id = 'output1';
     output2.id = 'output2';
-    output1.innerHTML = `Your Choice: ${options[selectedIndexUser].innerHTML}`;
-    output2.innerHTML = `Computer Choice: ${options[computerChoice].innerHTML}`;
+    output1.innerHTML = `Your Choice: <span> ${options[selectedIndexUser].innerHTML} </span>`;
+    output2.innerHTML = `Computer Choice: <span>${options[computerChoice].innerHTML} </span>`;
     reloadBtn.innerHTML = "Play Again";
     reloadBtn.classList = 'reloadBtn';
     modalContainer.appendChild(output1);
