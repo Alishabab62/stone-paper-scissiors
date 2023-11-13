@@ -34,17 +34,20 @@ options.addEventListener("change",() => {
     options.style.display = "none";
     if(selectedIndexUser == 0){
         alert("Please select valid Choice");
+        options.style.display = "block";
         return;
     }
     if(selectedIndexUser == computerChoice){
         modalContainer.innerHTML = ""
         output3.innerHTML = "Match Draw";
+        output3.id = "output-container-draw"
         modalContainer.appendChild(output3);
         
     }
     else if(selectedIndexUser == 1 && computerChoice == 2){
         modalContainer.innerHTML = ""
         output3.innerHTML = "Computer Win";
+        output3.id = "output-container-loss"
         modalContainer.appendChild(output3);
         computerRound++;
         roundContainer.innerHTML = "";
@@ -57,6 +60,7 @@ options.addEventListener("change",() => {
     else if(selectedIndexUser == 1 && computerChoice == 3){
         modalContainer.innerHTML = ""
         output3.innerHTML = "You Win";
+        output3.id = "output-container-win"
         modalContainer.appendChild(output3);
         userWin++;
         roundContainer.innerHTML = ""
@@ -69,6 +73,7 @@ options.addEventListener("change",() => {
     else if(selectedIndexUser == 2 && computerChoice == 1){
         modalContainer.innerHTML = ""
         output3.innerHTML = "You Win";
+        output3.id = "output-container-win"
         modalContainer.appendChild(output3);
         userWin++;
         roundContainer.innerHTML = ""
@@ -81,6 +86,7 @@ options.addEventListener("change",() => {
     else if(selectedIndexUser == 2 && computerChoice == 3){
         modalContainer.innerHTML = ""
         output3.innerHTML = "Computer Win";
+        output3.id = "output-container-loss"
         modalContainer.appendChild(output3);
         computerRound++;
         roundContainer.innerHTML = ""
@@ -93,6 +99,7 @@ options.addEventListener("change",() => {
     else if(selectedIndexUser == 3 && computerChoice == 1){
         modalContainer.innerHTML = ""
         output3.innerHTML = "Computer Win";
+        output3.id = "output-container-loss"
         modalContainer.appendChild(output3);
         computerRound++;
         roundContainer.innerHTML = ""
@@ -105,6 +112,7 @@ options.addEventListener("change",() => {
     else if(selectedIndexUser == 3 && computerChoice == 2){
         modalContainer.innerHTML = ""
         output3.innerHTML = "You Win";
+        output3.id = "output-container-win"
         modalContainer.appendChild(output3);
         userWin++;
         roundContainer.innerHTML = ""
