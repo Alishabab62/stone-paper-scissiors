@@ -21,10 +21,12 @@ startBtn.addEventListener("click",() => {
     const randomIndex = Math.floor(Math.random() * computerOptions.length);
     computerChoice = computerOptions[randomIndex];
     options.style.display = "block";
+    startBtn.style.display = "none"
 });
 
 
 let reloadBtn = document.createElement('button');
+let resetBtn = document.createElement("button");
 let output3 = document.createElement('h3');
 
 options.addEventListener("change",() => {
@@ -113,7 +115,10 @@ options.addEventListener("change",() => {
         
     }
 
-
+    
+    resetBtn.innerHTML = "Reset";
+    resetBtn.classList = 'reloadBtn'
+    resetBtn.style.marginLeft = "5px"
     modalContainer.style.display = "block";
     const output1 = document.createElement('h3');
     const output2 = document.createElement('h3');
@@ -126,10 +131,23 @@ options.addEventListener("change",() => {
     modalContainer.appendChild(output1);
     modalContainer.appendChild(output2);
     modalContainer.appendChild(reloadBtn);
+    modalContainer.appendChild(resetBtn);
 });
 
 
 reloadBtn.addEventListener('click', () =>{
     modalContainer.style.display = "none";
+    options.style.display = "block";
+    startBtn.style.display = "none"
 });
-
+resetBtn.addEventListener('click', ()=>{
+        modalContainer.style.display = "none";
+        startBtn.style.display = "block";
+        roundContainer.innerHTML = ""
+        userWin = 0;
+        computerRound = 0;
+        comRoundOutput.innerHTML = `Computer win: ${0}`;
+        userRoundOutput.innerHTML = `User win: ${0}`;
+        roundContainer.appendChild(comRoundOutput);
+        roundContainer.appendChild(userRoundOutput);
+});
